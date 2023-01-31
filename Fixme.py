@@ -21,6 +21,7 @@ def evens(n):
     >>> evens(-1)
     []
     '''
+
     result = (list(filter(lambda x: x % 2 == 0, range(n+1))))
     return result
 
@@ -40,14 +41,8 @@ def threes(n):
     >>> threes(50)
     [3, 13, 23, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 43]
     '''
-
-    def threesfunction(x):
-        if '3' in str(x):
-            return True
-        else:
-            return False
-    threeslist = (list(filter(threesfunction, range(n+1))))
-    return threeslist
+    result = (list(filter(lambda x: '3' in str(x), range(n+1))))
+    return result
 
 
 def small_words(text):
@@ -67,13 +62,8 @@ def small_words(text):
     ['a', 'big', 'word', 'is', 'bad']
     '''
 
-    def small_words_test(x):
-        if len(x) < 5:
-            return True
-        else:
-            return False
-    smalllist = (list(filter(small_words_test, text.split())))
-    return smalllist
+    result = (list(filter(lambda x: len(x) < 5, text.split())))
+    return result
 
 
 def squares(n):
